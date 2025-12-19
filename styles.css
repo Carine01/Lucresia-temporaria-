@@ -1,0 +1,148 @@
+
+:root {
+  --lavanda: #9F8DE6;
+  --lavanda-700: #7158CC;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.font-serif {
+    font-family: 'Playfair Display', serif;
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, var(--lavanda), var(--lavanda-700));
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.03);
+}
+
+.hover-lift:hover {
+    transform: translateY(-8px);
+    transition: transform 0.3s ease;
+}
+
+.card-shadow {
+    box-shadow: 0 10px 30px rgba(100, 100, 110, 0.1);
+}
+
+/* Auth Page Specific */
+.auth-container {
+    background-color: #ffffff;
+    color: #1a202c;
+}
+.btn-gradient {
+     background: linear-gradient(90deg, #9F8DE6, #7158CC);
+}
+
+.animate-on-scroll {
+    opacity: 0;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    transform: translateY(20px);
+}
+
+.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animação de Entrada do Vídeo */
+.video-entrance {
+    transform: scale(0.95);
+    transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.is-visible .video-entrance {
+    transform: scale(1);
+}
+
+/* Efeito de Brilho Suave (Glow) */
+@keyframes soft-glow {
+    0%, 100% { box-shadow: 0 0 25px rgba(113, 88, 204, 0.2); }
+    50% { box-shadow: 0 0 50px rgba(113, 88, 204, 0.5); }
+}
+
+.video-glow {
+    animation: soft-glow 4s ease-in-out infinite;
+}
+
+/* Toast Notifications */
+.toast-item {
+    animation: toast-in 0.5s cubic-bezier(0.21, 1.02, 0.73, 1) forwards;
+}
+
+@keyframes toast-in {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Skeleton Screens */
+.skeleton {
+    background-color: #e2e8f0; /* slate-200 */
+    border-radius: 0.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.skeleton::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateX(-100%);
+    background-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0) 100%);
+    animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* LucresIA Pro Styles */
+.robo-produtor-bg {
+    background-color: #f7f5ff;
+    background-image: radial-gradient(circle at 100% 0%, #e9e3ff 0%, #f7f5ff 30%);
+}
+
+.robo-produtor-sidebar {
+    background-color: #110E21;
+}
+
+.robo-produtor-card {
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    border: 1px solid #e5e7eb;
+}
+
+.robo-produtor-button {
+    background: linear-gradient(90deg, #8E2DE2, #4A00E0);
+    color: white;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    transition: all 0.3s ease;
+}
+
+.robo-produtor-button:hover {
+    box-shadow: 0 10px 15px -3px rgba(142, 45, 226, 0.3), 0 4px 6px -2px rgba(142, 45, 226, 0.2);
+    transform: translateY(-2px);
+}

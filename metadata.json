@@ -1,0 +1,8 @@
+{
+  "name": "Elevare v1.0 | Sistema de Lucro para Estética",
+  "description": "Arquitetura profissional multi-tenant para clínicas de estética. Gestão de leads, agendamento e marketing automatizado com IA de última geração.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
